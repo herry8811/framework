@@ -10,7 +10,8 @@ public class Mouth {
     private String code;
 
     public void speak() {
-        System.out.println("mouth 编号：" + code + ",依赖于hand 编号" + hand.getCode());
+//        System.out.println("mouth 编号：" + code + ",依赖于hand 编号" + hand.getCode());
+        System.out.println("mouth code:" + code + ",depend hand code" + hand.getCode());
         System.out.println("say hello world");
     }
 }

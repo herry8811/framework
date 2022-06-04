@@ -47,7 +47,7 @@ public class JsonUtils {
 
     public static <T> T readValue(String json, TypeReference valueTypeRef) {
         try {
-            return mapper.readValue(json, valueTypeRef);
+            return (T) mapper.readValue(json, valueTypeRef);
         } catch (Exception var3) {
             return null;
         }
@@ -55,7 +55,7 @@ public class JsonUtils {
 
     public static <T> T readValue(byte[] bytes, TypeReference valueTypeRef) {
         try {
-            return mapper.readValue(bytes, valueTypeRef);
+            return (T) mapper.readValue(bytes, valueTypeRef);
         } catch (Exception var3) {
             return null;
         }
@@ -63,7 +63,7 @@ public class JsonUtils {
 
     public static <T> T readValue(InputStream is,TypeReference valueTypeRef){
         try{
-            return mapper.readValue(is,valueTypeRef);
+            return (T) mapper.readValue(is,valueTypeRef);
         }catch (Exception e){
             return null;
         }
